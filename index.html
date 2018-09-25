@@ -5,9 +5,14 @@
   <body>
 
   <h2>介入記録アプリ</h2>
-  <div id="app">
-    {{message}}
-  </div>
+    <div id="app">
+      <button v-on:click="addRecord(1)">介入（テーブル１）</button>
+      <ul>
+        <li v-for="r in records">
+          {{r}}
+        </li>
+      </ul>
+    </div>
   <script src="index.js"></script>
   </body>
 </html>
