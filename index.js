@@ -10,6 +10,9 @@ var app = new Vue({
         table: tid
       })
     },
+    removeRecord: function () {
+      this.records.pop()
+    },
     download: function () {
       let element = document.createElement('a');
       const filename = 'data' + new Date().toLocaleTimeString()
