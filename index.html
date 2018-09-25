@@ -6,7 +6,10 @@
 
   <h2>介入記録アプリ</h2>
     <div id="app">
-      <button v-on:click="addRecord(1)">介入（テーブル１）</button>
+      <span v-for="tid in [1,2,3]">
+        <button v-on:click="addRecord(tid)">介入（テーブル{{tid}}）</button>
+      </span>
+      <button v-on:click="download">データをダウンロード</button>
       <ul>
         <li v-for="r in records">
           {{r}}
