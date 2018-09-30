@@ -1,6 +1,7 @@
 var app = new Vue({
   el: '#app',
   data: {
+    headers: [{text: 'time'}, {text: 'table'}],
     records: []
   },
   methods: {
