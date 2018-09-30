@@ -4,41 +4,23 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-</head>
-<body>
-  <div id="app">
-    <v-app>
-      <v-content>
-        <v-container>Loading</v-container>
-      </v-content>
-    </v-app>
-  </div>
- 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
-  <script>
-    new Vue({ el: '#app' })
-  </script>
-</body>
-</html>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
 
   <h2>介入記録アプリ</h2>
-    <div id="app">
-      <span v-for="tid in [1,2,3]">
-        <v-btn v-on:click="addRecord(tid)">介入（テーブル{{tid}}）</v-btn>
-      </span>
-      <v-btn v-on:click="removeRecord">一個削除</v-btn>
-      <v-btn v-on:click="download">データをダウンロード</v-btn>
-      <v-data-table :headers="headers" :items="records">
-        <template slot="items" slot-scope="props">
-          <td>{{props.item.time}}</td>
-          <td>{{props.item.table}}</td>
-        </template>
-      </v-data-table>
-    </div>
+  <div id="app">
+    <span v-for="tid in [1,2,3]">
+      <v-btn v-on:click="addRecord(tid)">介入（テーブル{{tid}}）</v-btn>
+    </span>
+    <v-btn v-on:click="removeRecord">一個削除</v-btn>
+    <v-btn v-on:click="download">データをダウンロード</v-btn>
+    <v-data-table :headers="headers" :items="records">
+      <template slot="items" slot-scope="props">
+        <td>{{props.item.time}}</td>
+        <td>{{props.item.table}}</td>
+      </template>
+    </v-data-table>
+  </div>
   <script src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
