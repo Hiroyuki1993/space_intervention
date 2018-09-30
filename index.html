@@ -1,12 +1,12 @@
 <html>
   <head>
     <title>介入記録アプリ</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
   </head>
   <body>
-
   <h2>介入記録アプリ</h2>
   <div id="app">
     <span v-for="tid in [1,2,3]">
@@ -21,8 +21,7 @@
       </template>
     </v-data-table>
   </div>
-  <script src="index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
-  </body>
+  <script src="index.js"></script>  
+</body>
 </html>
